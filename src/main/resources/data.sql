@@ -1,0 +1,6 @@
+INSERT INTO Usuario (id, nome, modulo, preferencias, email, senha, confirmarSenha) 
+VALUES('346','jose', 'Primeiro', 'programacao', 'jose@gmail.com', '12345', '12345')
+INSERT INTO Usuario (id, nome, modulo, preferencias, email, senha, confirmarSenha) 
+VALUES('444', 'kaio', 'Segundo', 'banco de Dados', 'kaio@gmail.com', '12345', '12345')
+INSERT INTO Usuario (id, nome, modulo, preferencias, email, senha, confirmarSenha) 
+VALUES('666', 'vitoria', 'Terceiro', 'Sistemas Operacionais', 'vitoria@gmail.com', '12345', '12345')

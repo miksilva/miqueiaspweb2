@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Formulário</title>
+
+  <script language="javascript" type="text/javascript">
+    function validar() {
+      var nome = document.getElementById("nome").value;
+      var email = form1.email.value;
+      var senha = form1.senha.value;
+      var rep_senha = form1.rep_senha.value;
+
+      if (nome == "") {
+        alert('Preencha o campo com seu nome');
+        form1.nome.focus();
+        return false;
+      }
+
+      if (senha.length < 6) {
+        alert('a senha deve conter ao menos seis caracteres');
+        form1.senha.focus();
+        return false;
+      }
+
+      if (senha != rep_senha) {
+        alert('Senhas diferentes');
+        form1.senha.focus();
+        return false;
+      }
+    }
+  </script>
+  <style>
+    h1 {
+      text-align: center;
+      background: rgb(211, 201, 201);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    body {
+      margin: 0%
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      background: rgb(221, 218, 224);
+      display: flex;
+      justify-content: center;
+      align-items: center top 100%;
+    size: 400px;
+    }
+    .legend{
+      size: 400px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>Cadastro do Aluno</h1>
+
+  <div class="container">
+
+    <form name="form1" action="NovoCadastro" method="post">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <br>  
+        <table cellspacing="10">
+          <tr>
+            <td>
+              <label for="nome">Nome: </label>
+
+            </td>
+            <td align="left">
+              <input type="text" id="nome" placeholder="Nome">
+            </td>
+        </table>
+        <br>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Modulo:</label>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              <label class="form-check-label" for="gridRadios2">
+                Primeiro
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+              <label class="form-check-label" for="gridRadios3">
+                Segundo
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4">
+              <label class="form-check-label" for="gridRadios4">
+                Terceiro
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        <br>
+
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Disciplina com mais afinidade:</label>
+          </div>
+        </div>
+        <br>
+        
+        
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Programacao
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+        <label class="form-check-label" for="defaultCheck2">
+          Sistemas Operacionais 
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+        <label class="form-check-label" for="defaultCheck2">
+          Banco de dados
+        </label>
+      </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Dados de login</legend>
+        <table cellspacing="10">
+          <tr>
+            <td>
+              <label for="email">E-mail: </label>
+            </td>
+            <td align="left">
+              <input type="text" placeholder="Email" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="senha">Senha: </label>
+            </td>
+            <td align="left">
+              <input type="password" placeholder="senha" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="rep_senha">Confirme a senha: </label>
+            </td>
+            <td align="left">
+              <input type="password" placeholder="Confirme a senha" required>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+      <input type="submit" onclick="return validar()">
+      <input type="reset" value="Limpar">
+    </form>
+  </div>
+
+</body>
+
+</html>
+
